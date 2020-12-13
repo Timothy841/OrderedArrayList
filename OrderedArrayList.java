@@ -2,12 +2,12 @@ import java.util.ArrayList;
 public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T>{
 
   public boolean add(T a){
-    if (a==null){
-      throw new IllegalArgumentException();
-    }
     super.add(this.position(a),a);
-    System.out.println(this.position(a)+","+a);
     return true;
+  }
+
+  public void add(int b, T a){
+    super.add(this.position(a),a);
   }
 
   private int position(T a){
