@@ -1,6 +1,14 @@
 import java.util.ArrayList;
 public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T>{
 
+  public OrderedArrayList(){
+    super();
+  }
+
+  public OrderedArrayList(int startingCapacity){
+    super(startingCapacity);
+  }
+
   public boolean add(T a){
     super.add(this.position(a),a);
     return true;
