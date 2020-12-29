@@ -26,6 +26,9 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   }
 
   private int position(T a){
+    if (a==null){
+      throw new IllegalArgumentException();
+    }
     for (int i = 0; i<this.size();i++){
       if (this.get(i).compareTo(a)==1){
         return i;
